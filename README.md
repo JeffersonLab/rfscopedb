@@ -9,7 +9,7 @@ Starting with version 0.2.0, source and wheel files are attached to each GitHub 
 using pip as follows.  Update the version strings to match desired version.  See 
 [Releases](https://github.com/JeffersonLab/rfscopedb/releases) for more details.
 ```
-pip install https://github.com/JeffersonLab/rfscopedb/releases/download/v0.2.0/rfscopedb-0.2.0-py3-none-any.whl
+pip install https://github.com/JeffersonLab/rfscopedb/releases/download/v1.1.0/rfscopedb-1.1.0-py3-none-any.whl
 ```
 
 ### Example Usage
@@ -19,7 +19,7 @@ or that you have the provided docker container database running (see [Developer 
 from rfscopedb.db import WaveformDB
 from rfscopedb.data_model import Query
 
-db = WaveformDB(host='localhost', user='scope_rw', password='password')
+db = WaveformDB(host='localhost', user='scope_rw', password='password', array_names=['raw', 'power_spectrum'])
 
 q = Query(db=db, signal_names=["GMES", "PMES"])
 # queries information on the scans that meet the criteria in q.  This should be quick.
